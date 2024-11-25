@@ -4,6 +4,6 @@
 name = input("what your name : " )
 age = int(input("Howe old are you? : "))
 
-print(f" Name : {name}")
+print(f" Name : {name}") 
 print(f"Age : {age}")
 
