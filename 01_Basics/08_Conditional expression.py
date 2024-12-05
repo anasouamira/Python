@@ -2,7 +2,6 @@
 #                          Print or assign one of two values based on a condition
 #                          X if condition else Y
 
-
 num = 5  
 a = 6    
 b = 7   
