@@ -1,3 +1,22 @@
+import string
+
+# Original text
+text1 = "Welcome to the world of Python"
+text2 = "Welcome, to the world of Python!"
+
+# Count characters in the original string
+num_chars = len(text1)
+print(f"The number of characters in '{text1}' is: {num_chars}")  # Output: 30
+
+# Remove spaces and count the characters
+num_chars_without_spaces = len(text1.replace(" ", ""))
+print(f"The number of characters (excluding spaces) in '{text1}' is: {num_chars_without_spaces}")  # Output: 25
+
+# Remove spaces and punctuation, then count the characters
+filtered_text = ''.join(char for char in text2 if char not in string.punctuation and char != " ")
+num_chars_without_spaces_and_punctuation = len(filtered_text)
+print(f"The number of characters (excluding spaces and punctuation) in '{text2}' is: {num_chars_without_spaces_and_punctuation}")  # Output: 25
+
 # Example string
 s = " hello world "
 
