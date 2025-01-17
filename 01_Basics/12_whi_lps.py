@@ -26,3 +26,12 @@ while count < 5:
         print("Skipping 3")
         continue  # Skip the rest of the loop body when count is 3
     print(f"Count is: {count}")
+
+# Simulating a do-while loop
+while True:
+    number = int(input("Enter a positive number: "))
+    if number > 0:
+        print(f"Thank you! You entered: {number}")
+        break  # Exit the loop if the condition is met
+    else:
+        print("That's not a positive number. Try again!")
