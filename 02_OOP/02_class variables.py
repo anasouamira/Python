@@ -7,23 +7,28 @@
 class Employee:
     # Class variable
     company_name = "TechCorp"
+    num_company = 0
     
     def __init__(self, name, age):
         # Instance variables
+        Employee.num_company += 1
+        
+        self.id = Employee.num_company
         self.name = name
         self.age = age
 
     def display_info(self):
-        print(f"Employee Name: {self.name}, Age: {self.age}, Company: {Employee.company_name}")
+        print(f"Employee Name: {self.name}, Age: {self.age}, Company: {Employee.company_name} , id of company {self.id}")
 
 # Create instances of the Employee class
 employee1 = Employee("Alice", 28)
 employee2 = Employee("Bob", 32)
 
 # Accessing class variable
-print(Employee.company_name)  # Output: TechCorp
+print(Employee.company_name)   # Output: TechCorp
 print(employee1.company_name)  # Output: TechCorp
 print(employee2.company_name)  # Output: TechCorp
+print(Employee.num_company)    # Output: 2
 
 # Modifying the class variable
 Employee.company_name = "InnovateTech"

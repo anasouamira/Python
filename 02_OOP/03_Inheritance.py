@@ -4,43 +4,25 @@
 
 # Parent class
 class Animal:
-    def __init__(self, name, species):
-        self.name = name        # Instance variable
-        self.species = species  # Instance variable
-    
+    def __init__(self, name):
+        self.name = name
+
     def speak(self):
-        print(f"{self.name} makes a sound")
+        return f"{self.name} makes a sound."
 
 # Child class inheriting from Animal
 class Dog(Animal):
-    def __init__(self, name, species, breed):
-        # Call the parent class constructor to initialize name and species
-        super().__init__(name, species)
-        self.breed = breed      # Additional attribute for Dog
-    
-    # Overriding the speak method
     def speak(self):
-        print(f"{self.name} barks")
+        return f"{self.name} barks."
 
-# Child class inheriting from Animal
+# Another child class inheriting from Animal
 class Cat(Animal):
-    def __init__(self, name, species, color):
-        # Call the parent class constructor to initialize name and species
-        super().__init__(name, species)
-        self.color = color      # Additional attribute for Cat
-    
-    # Overriding the speak method
     def speak(self):
-        print(f"{self.name} meows")
+        return f"{self.name} meows."
 
-# Creating objects of the Dog and Cat classes
-dog = Dog("Buddy", "Canine", "Golden Retriever")
-cat = Cat("Whiskers", "Feline", "Black")
+# Example usage
+dog = Dog("Buddy")
+cat = Cat("Whiskers")
 
-# Calling the speak method (overridden in child classes)
-dog.speak()  # Output: Buddy barks
-cat.speak()  # Output: Whiskers meows
-
-# Accessing attributes from the parent class
-print(f"{dog.name} is a {dog.species} of breed {dog.breed}")  # Output: Buddy is a Canine of breed Golden Retriever
-print(f"{cat.name} is a {cat.species} of color {cat.color}")  # Output: Whiskers is a Feline of color Black
+print(dog.speak())  # Buddy barks.
+print(cat.speak())  # Whiskers meows.
